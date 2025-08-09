@@ -67,7 +67,7 @@ Packaging: Dockerfile, reproducible notebook, README, unit tests.
 * Trade distribution, average slippage in bps
 
 ## 1. Repository Structure
-
+```
 market_microstructure_stat_arb/
 │
 ├── data/                      # Raw & processed market data
@@ -90,3 +90,4 @@ market_microstructure_stat_arb/
 ├── Dockerfile
 ├── README.md
 └── run_backtest.py            # CLI to run the full pipeline
+```
