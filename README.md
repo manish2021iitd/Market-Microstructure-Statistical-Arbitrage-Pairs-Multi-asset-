@@ -66,3 +66,27 @@ Packaging: Dockerfile, reproducible notebook, README, unit tests.
 
 * Trade distribution, average slippage in bps
 
+## 1. Repository Structure
+
+market_microstructure_stat_arb/
+│
+├── data/                      # Raw & processed market data
+├── notebooks/                 # Jupyter EDA & prototype models
+│   ├── 01_eda.ipynb
+│   ├── 02_cointegration_tests.ipynb
+│   ├── 03_signal_backtest.ipynb
+│
+├── src/
+│   ├── __init__.py
+│   ├── data_loader.py         # Fetch & preprocess data
+│   ├── cointegration.py       # Pair selection
+│   ├── signal_generation.py   # Z-score, Kalman filter, thresholds
+│   ├── backtester.py          # Vectorized backtesting w/ costs
+│   ├── execution.py           # Slippage & fill simulation
+│   ├── risk.py                # Sharpe, drawdown, volatility
+│   ├── dashboard.py           # Streamlit app
+│
+├── requirements.txt
+├── Dockerfile
+├── README.md
+└── run_backtest.py            # CLI to run the full pipeline
